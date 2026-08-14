@@ -7,11 +7,23 @@ RDKit descriptor와 PyTorch Geometric graph 표현을 비교하고, 같은 rando
 ## 설치
 
 Python 3.13과 [uv](https://docs.astral.sh/uv/)가 필요합니다.
-GPU가 없는 환경을 기준으로 PyTorch의 공식 CPU-only wheel을 사용하도록 설정되어
-있어 CUDA 런타임을 설치하지 않습니다.
+기본 환경은 PyTorch의 공식 CUDA 13 wheel을 사용합니다. CUDA 13을 지원하는
+NVIDIA 드라이버가 설치된 Linux/WSL x86-64 환경에서 다음 명령을 실행합니다.
 
 ```bash
 uv sync
+```
+
+GPU가 없는 환경에서는 `gpu` 그룹을 끄고 CPU-only wheel을 설치합니다.
+
+```bash
+uv sync --no-group gpu --group cpu
+```
+
+CPU 환경에서 명령을 실행할 때도 같은 그룹 선택을 지정합니다.
+
+```bash
+uv run --no-group gpu --group cpu <command>
 ```
 
 첫 데이터 로드 시 PyG가 ESOL 원본을 내려받아 `data/MoleculeNet/`에 저장합니다.
