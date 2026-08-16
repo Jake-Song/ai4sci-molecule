@@ -1,8 +1,8 @@
 # AI4Sci Molecule
 
 ESOL을 시작점으로 분자 표현과 용해도 회귀를 익히는 프로젝트입니다. 1주차에는
-RDKit descriptor와 PyTorch Geometric graph 표현을 비교하고, 같은 random split에서
-세 가지 고전 회귀 baseline을 평가합니다.
+RDKit descriptor baseline을 만들고, 2주차에는 atom embedding과 message passing으로
+graph representation을 학습하는 GCN/GIN을 같은 random split에서 비교합니다.
 
 ## 설치
 
@@ -31,9 +31,14 @@ uv run --no-group gpu --group cpu <command>
 
 ## 노트북 실행
 
-실행 결과가 저장된 노트북은
-[`notebooks/01_molecule_exploration.ipynb`](notebooks/01_molecule_exploration.ipynb)입니다.
-처음부터 다시 실행하려면 다음 명령을 사용합니다.
+노트북은 다음 두 개입니다.
+
+- [`notebooks/01_molecule_exploration.ipynb`](notebooks/01_molecule_exploration.ipynb):
+  descriptor 탐색과 Linear/MLP baseline
+- [`notebooks/02_gnn_solubility.ipynb`](notebooks/02_gnn_solubility.ipynb):
+  GCN/GIN 학습과 descriptor baseline 비교
+
+2주차 노트북을 처음부터 다시 실행하려면 다음 명령을 사용합니다.
 
 ```bash
 uv run jupyter nbconvert \
@@ -41,7 +46,7 @@ uv run jupyter nbconvert \
   --execute \
   --inplace \
   --ExecutePreprocessor.timeout=600 \
-  notebooks/01_molecule_exploration.ipynb
+  notebooks/02_gnn_solubility.ipynb
 ```
 
 대화형으로 살펴보려면 `uv run jupyter lab`을 실행합니다.
@@ -52,8 +57,9 @@ uv run jupyter nbconvert \
 uv run pytest
 ```
 
-`tests/test_week1.py`는 네트워크 없이 실행됩니다. 통합 테스트는 이미 내려받은
-데이터를 재사용하며, 데이터가 없으면 최초 한 번 ESOL을 다운로드합니다.
+`tests/test_week1.py`와 `tests/test_week2.py`는 네트워크 없이 실행됩니다. 통합
+테스트는 이미 내려받은 데이터를 재사용하며, 데이터가 없으면 최초 한 번 ESOL을
+다운로드합니다.
 
 재사용 가능한 1주차 API는 `src/ai4sci_molecule/week1.py`에 있습니다.
 
@@ -64,6 +70,15 @@ uv run pytest
 - `build_baselines(seed=42)`
 - `regression_metrics(y_true, y_pred)`
 
-고정 seed 42의 index split(ESOL 기준 train 902 / validation 113 / test 113)은
-다음 주 GNN 비교에서도 그대로 사용합니다. 이번 범위에는 GNN 학습과 scaffold
-split이 포함되지 않습니다.
+재사용 가능한 2주차 API는 `src/ai4sci_molecule/week2.py`에 있습니다.
+
+- `GCNRegressor(...)`
+- `GINRegressor(...)` (bond feature를 사용하는 GINE 구현)
+- `TrainingConfig(...)`
+- `build_gnn_models(...)`
+- `train_gnn(model, dataset, split, ...)`
+- `predict_gnn(result, dataset, indices, ...)`
+
+두 주차 모두 고정 seed 42의 동일 index split(ESOL 기준 train 902 / validation 113 /
+test 113)을 사용합니다. 2주차에서는 validation RMSE로 early stopping checkpoint를
+선택한 뒤 test를 한 번 평가합니다. scaffold split과 여러 seed 비교는 후속 범위입니다.

@@ -11,6 +11,19 @@ from .week1 import (
     regression_metrics,
     smiles_to_graph,
 )
+from .week2 import (
+    ATOM_FEATURE_CARDINALITIES,
+    BOND_FEATURE_CARDINALITIES,
+    GCNRegressor,
+    GINRegressor,
+    TrainingConfig,
+    TrainingResult,
+    build_gnn_models,
+    predict_gnn,
+    resolve_device,
+    seed_everything,
+    train_gnn,
+)
 
 __all__ = [
     "DESCRIPTOR_NAMES",
@@ -22,4 +35,15 @@ __all__ = [
     "make_random_split",
     "regression_metrics",
     "smiles_to_graph",
+    "ATOM_FEATURE_CARDINALITIES",
+    "BOND_FEATURE_CARDINALITIES",
+    "GCNRegressor",
+    "GINRegressor",
+    "TrainingConfig",
+    "TrainingResult",
+    "build_gnn_models",
+    "predict_gnn",
+    "resolve_device",
+    "seed_everything",
+    "train_gnn",
 ]
