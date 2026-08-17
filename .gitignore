@@ -12,3 +12,6 @@ wheels/
 # Downloaded datasets and notebook scratch files
 data/
 .ipynb_checkpoints/
+
+# Large regenerable sweep artifact (uv run python -m ai4sci_molecule.week3)
+results/week3/predictions.csv

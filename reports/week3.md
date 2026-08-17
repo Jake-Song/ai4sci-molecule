@@ -238,6 +238,8 @@ memorization에서 옵니다.** 물리적 관계를 배우지 못했다고 단�
 
 ---
 
-모든 수치는 `results/week3/`(`metrics.csv`, `predictions.csv`, `summary.json`)에서 나왔고,
-`uv run python -m ai4sci_molecule.week3`로 재생성할 수 있습니다. 실험 과정은
+모든 수치는 `results/week3/`(`metrics.csv`, `summary.json`, 그리고 분자 단위
+`predictions.csv`)에서 나왔습니다. `summary.json`에 이 문서의 모든 표가 그대로 들어 있고,
+`predictions.csv`는 크기 때문에 커밋하지 않으므로 `uv run python -m ai4sci_molecule.week3`로
+재생성합니다. 실험 과정은
 [`notebooks/03_scaffold_split.ipynb`](../notebooks/03_scaffold_split.ipynb)에 있습니다.

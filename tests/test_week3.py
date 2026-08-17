@@ -458,6 +458,25 @@ def test_load_or_run_sweep_reuses_a_cached_directory(tmp_path):
     pd.testing.assert_frame_equal(second.metrics, first.metrics, check_exact=False, atol=1e-4)
 
 
+def test_load_or_run_sweep_recomputes_when_a_cached_file_is_missing(tmp_path):
+    dataset = make_tiny_dataset()
+    config = SweepConfig(
+        seeds=(0,),
+        include_gnns=False,
+        training=TrainingConfig(batch_size=4, max_epochs=2, patience=1),
+    )
+    first = load_or_run_sweep(dataset, directory=tmp_path, config=config, device="cpu")
+    # predictions.csv is gitignored, so a fresh checkout has a partial cache.
+    (tmp_path / "predictions.csv").unlink()
+
+    rebuilt = load_or_run_sweep(dataset, directory=tmp_path, config=config, device="cpu")
+
+    assert (tmp_path / "predictions.csv").exists()
+    pd.testing.assert_frame_equal(
+        rebuilt.metrics, first.metrics, check_exact=False, atol=1e-4
+    )
+
+
 def test_load_or_run_sweep_warns_and_recomputes_on_a_configuration_mismatch(tmp_path):
     dataset = make_tiny_dataset()
     training = TrainingConfig(batch_size=4, max_epochs=2, patience=1)

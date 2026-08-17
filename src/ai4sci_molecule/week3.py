@@ -38,6 +38,13 @@ DESCRIPTOR_REPRESENTATION = "RDKit descriptors"
 GRAPH_REPRESENTATION = "Molecular graph"
 DEFAULT_SIMILARITY_BINS = (0.0, 0.2, 0.4, 0.6, 0.8, 1.0)
 DEFAULT_RESULTS_DIRECTORY = Path("results/week3")
+SWEEP_FILENAMES = (
+    "metrics.csv",
+    "predictions.csv",
+    "scaffold_overlap.csv",
+    "splits.json",
+    "sweep_config.json",
+)
 
 METRIC_NAMES = ("RMSE", "MAE", "R2")
 METRICS_COLUMNS = (
@@ -832,7 +839,9 @@ def load_or_run_sweep(
 
     config = config or SweepConfig()
     target = Path(directory)
-    if not refresh and (target / "sweep_config.json").exists():
+    # Every file must be present: predictions.csv is large enough that a checkout may
+    # legitimately be missing it, and a partial cache should recompute, not raise.
+    if not refresh and all((target / name).exists() for name in SWEEP_FILENAMES):
         cached = load_sweep_results(target)
         if cached.config == config:
             return cached

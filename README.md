@@ -62,16 +62,20 @@ uv run jupyter nbconvert \
 
 ## 결과물
 
-3주차 sweep의 표·원시 예측값·그림은 `results/week3/`에 커밋되어 있습니다
-(`metrics.csv`, `predictions.csv`, `summary.json`, `figures/*.png`). 전체를 다시
-생성하려면 다음을 실행합니다.
+3주차 sweep의 표와 그림은 `results/week3/`에 커밋되어 있습니다
+(`metrics.csv`, `summary.json`, `splits.json`, `figures/*.png`). 분자 단위 예측값인
+`predictions.csv`는 1 MB에 가까워 `.gitignore` 대상이며, 아래 명령으로 나머지 결과와
+함께 다시 만들 수 있습니다(GPU 기준 약 10분).
 
 ```bash
 uv run python -m ai4sci_molecule.week3
 ```
 
+노트북과 `load_or_run_sweep`은 캐시 파일이 하나라도 없으면 자동으로 다시 계산하므로,
+새로 clone한 저장소에서도 그대로 실행됩니다.
+
 해석과 한계는 [`reports/week3.md`](reports/week3.md)에 정리해 두었습니다.
-`data/`는 다시 내려받을 수 있는 원본이므로 계속 `.gitignore` 대상입니다.
+`data/`도 다시 내려받을 수 있는 원본이므로 계속 `.gitignore` 대상입니다.
 
 ## 테스트
 
