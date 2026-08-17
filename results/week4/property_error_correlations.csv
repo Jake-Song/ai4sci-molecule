@@ -1,0 +1,131 @@
+regime,model,property,molecules,spearman,ci_low,ci_high,excludes_zero,baseline_spearman,partial_spearman,trained_on
+in_domain,Dummy (mean),MolWt,470,-0.054520,-0.154176,0.042155,False,-0.054520,-0.011265,True
+in_domain,Dummy (mean),MolLogP,470,0.046111,-0.068209,0.154616,False,0.046111,-0.026132,True
+in_domain,Dummy (mean),TPSA,470,-0.117104,-0.204784,-0.024824,True,-0.117104,0.013590,True
+in_domain,Dummy (mean),NumRotatableBonds,470,-0.072528,-0.164222,0.020026,False,-0.072528,-0.004749,True
+in_domain,Dummy (mean),AromaticAtomFraction,470,-0.005019,-0.091300,0.080643,False,-0.005019,-0.008878,True
+in_domain,Dummy (mean),HeavyAtomCount,470,-0.027771,-0.124019,0.066071,False,-0.027771,-0.015850,False
+in_domain,Dummy (mean),NumRings,470,0.003005,-0.090355,0.094591,False,0.003005,-0.012336,False
+in_domain,Dummy (mean),NumAromaticRings,470,0.020455,-0.073548,0.111989,False,0.020455,-0.016616,False
+in_domain,Dummy (mean),NumAliphaticRings,470,-0.031480,-0.123461,0.056326,False,-0.031480,0.000252,False
+in_domain,Dummy (mean),NumHeteroatoms,470,-0.068198,-0.163251,0.028738,False,-0.068198,0.015072,False
+in_domain,Dummy (mean),FractionCSP3,470,0.017524,-0.074890,0.112681,False,0.017524,-0.007471,False
+in_domain,Dummy (mean),NumHDonors,470,-0.095836,-0.182834,-0.008465,True,-0.095836,0.026720,False
+in_domain,Dummy (mean),NumHAcceptors,470,-0.096590,-0.183948,-0.001403,True,-0.096590,0.007447,False
+in_domain,Linear,MolWt,470,-0.058981,-0.145361,0.030748,False,-0.054520,-0.045457,True
+in_domain,Linear,MolLogP,470,0.094189,0.004483,0.185838,True,0.046111,0.082481,True
+in_domain,Linear,TPSA,470,-0.107460,-0.199211,-0.014466,True,-0.117104,-0.073707,True
+in_domain,Linear,NumRotatableBonds,470,-0.084248,-0.176109,0.008486,False,-0.072528,-0.068699,True
+in_domain,Linear,AromaticAtomFraction,470,0.028238,-0.066965,0.124179,False,-0.005019,0.032193,True
+in_domain,Linear,HeavyAtomCount,470,0.008899,-0.076995,0.094350,False,-0.027771,0.017262,False
+in_domain,Linear,NumRings,470,0.055470,-0.036070,0.144050,False,0.003005,0.057406,False
+in_domain,Linear,NumAromaticRings,470,0.024144,-0.073157,0.114571,False,0.020455,0.019460,False
+in_domain,Linear,NumAliphaticRings,470,0.080608,-0.005969,0.169544,False,-0.031480,0.095116,False
+in_domain,Linear,NumHeteroatoms,470,-0.201160,-0.294461,-0.110205,True,-0.068198,-0.189441,False
+in_domain,Linear,FractionCSP3,470,0.026484,-0.066729,0.121894,False,0.017524,0.020890,False
+in_domain,Linear,NumHDonors,470,-0.009096,-0.096524,0.080476,False,-0.095836,0.022556,False
+in_domain,Linear,NumHAcceptors,470,-0.117050,-0.209840,-0.024903,True,-0.096590,-0.090426,False
+in_domain,MLP,MolWt,470,0.226832,0.138304,0.312025,True,-0.054520,0.238811,True
+in_domain,MLP,MolLogP,470,0.132343,0.035202,0.221553,True,0.046111,0.138157,True
+in_domain,MLP,TPSA,470,0.147849,0.058309,0.237815,True,-0.117104,0.163567,True
+in_domain,MLP,NumRotatableBonds,470,0.088392,-0.008780,0.186850,False,-0.072528,0.105022,True
+in_domain,MLP,AromaticAtomFraction,470,0.021871,-0.073265,0.112456,False,-0.005019,0.021445,True
+in_domain,MLP,HeavyAtomCount,470,0.242956,0.158539,0.325745,True,-0.027771,0.251837,False
+in_domain,MLP,NumRings,470,0.143256,0.056169,0.227175,True,0.003005,0.144161,False
+in_domain,MLP,NumAromaticRings,470,0.091831,0.000251,0.185381,True,0.020455,0.088825,False
+in_domain,MLP,NumAliphaticRings,470,0.146543,0.058315,0.235252,True,-0.031480,0.152343,False
+in_domain,MLP,NumHeteroatoms,470,0.172177,0.079664,0.263304,True,-0.068198,0.180955,False
+in_domain,MLP,FractionCSP3,470,-0.038183,-0.125021,0.052715,False,0.017524,-0.038776,False
+in_domain,MLP,NumHDonors,470,0.038126,-0.051431,0.128326,False,-0.095836,0.050483,False
+in_domain,MLP,NumHAcceptors,470,0.150046,0.060345,0.240501,True,-0.096590,0.162507,False
+in_domain,GCN,MolWt,470,0.248371,0.158054,0.341044,True,-0.054520,0.273458,True
+in_domain,GCN,MolLogP,470,0.171988,0.076200,0.262747,True,0.046111,0.201100,True
+in_domain,GCN,TPSA,470,0.123514,0.034542,0.212644,True,-0.117104,0.136876,True
+in_domain,GCN,NumRotatableBonds,470,0.034602,-0.065287,0.128747,False,-0.072528,0.069376,True
+in_domain,GCN,AromaticAtomFraction,470,0.079343,-0.014530,0.162475,False,-0.005019,0.076821,True
+in_domain,GCN,HeavyAtomCount,470,0.259281,0.164277,0.351907,True,-0.027771,0.280827,False
+in_domain,GCN,NumRings,470,0.241255,0.151997,0.323960,True,0.003005,0.246553,False
+in_domain,GCN,NumAromaticRings,470,0.147561,0.051889,0.236231,True,0.020455,0.142231,False
+in_domain,GCN,NumAliphaticRings,470,0.161712,0.074621,0.253211,True,-0.031480,0.172704,False
+in_domain,GCN,NumHeteroatoms,470,0.188372,0.099201,0.278360,True,-0.068198,0.190724,False
+in_domain,GCN,FractionCSP3,470,-0.097538,-0.184174,-0.003644,True,0.017524,-0.094370,False
+in_domain,GCN,NumHDonors,470,-0.017852,-0.106296,0.070327,False,-0.095836,-0.003847,False
+in_domain,GCN,NumHAcceptors,470,0.170690,0.077856,0.258895,True,-0.096590,0.178603,False
+in_domain,GIN,MolWt,470,0.265178,0.180204,0.351722,True,-0.054520,0.292103,True
+in_domain,GIN,MolLogP,470,0.105732,0.015410,0.194227,True,0.046111,0.141573,True
+in_domain,GIN,TPSA,470,0.174980,0.090637,0.264046,True,-0.117104,0.183155,True
+in_domain,GIN,NumRotatableBonds,470,0.095836,0.001722,0.185927,True,-0.072528,0.137619,True
+in_domain,GIN,AromaticAtomFraction,470,0.157932,0.060223,0.248690,True,-0.005019,0.155637,True
+in_domain,GIN,HeavyAtomCount,470,0.275439,0.189221,0.360995,True,-0.027771,0.299878,False
+in_domain,GIN,NumRings,470,0.241289,0.153337,0.325415,True,0.003005,0.246858,False
+in_domain,GIN,NumAromaticRings,470,0.222074,0.126981,0.310260,True,0.020455,0.217630,False
+in_domain,GIN,NumAliphaticRings,470,0.059988,-0.031761,0.149840,False,-0.031480,0.068092,False
+in_domain,GIN,NumHeteroatoms,470,0.238134,0.151585,0.323966,True,-0.068198,0.235165,False
+in_domain,GIN,FractionCSP3,470,-0.174250,-0.253653,-0.081565,True,0.017524,-0.169955,False
+in_domain,GIN,NumHDonors,470,0.054670,-0.030676,0.142972,False,-0.095836,0.067333,False
+in_domain,GIN,NumHAcceptors,470,0.201998,0.116235,0.289653,True,-0.096590,0.203359,False
+out_of_scaffold,Dummy (mean),MolWt,413,0.291389,0.207040,0.375366,True,0.291389,0.006683,True
+out_of_scaffold,Dummy (mean),MolLogP,413,0.601696,0.513254,0.678735,True,0.601696,0.001691,True
+out_of_scaffold,Dummy (mean),TPSA,413,-0.378165,-0.461464,-0.293753,True,-0.378165,-0.025820,True
+out_of_scaffold,Dummy (mean),NumRotatableBonds,413,-0.035081,-0.132963,0.056787,False,-0.035081,0.006383,True
+out_of_scaffold,Dummy (mean),AromaticAtomFraction,413,0.139215,0.050664,0.228223,True,0.139215,-0.056831,True
+out_of_scaffold,Dummy (mean),HeavyAtomCount,413,0.188022,0.107015,0.266481,True,0.188022,-0.017247,False
+out_of_scaffold,Dummy (mean),NumRings,413,0.140306,0.046999,0.227467,True,0.140306,-0.029133,False
+out_of_scaffold,Dummy (mean),NumAromaticRings,413,0.199525,0.106175,0.291591,True,0.199525,-0.055280,False
+out_of_scaffold,Dummy (mean),NumAliphaticRings,413,-0.130861,-0.221318,-0.036718,True,-0.130861,0.044167,False
+out_of_scaffold,Dummy (mean),NumHeteroatoms,413,-0.027843,-0.120195,0.066736,False,-0.027843,0.009015,False
+out_of_scaffold,Dummy (mean),FractionCSP3,413,-0.172314,-0.268454,-0.074968,True,-0.172314,0.041763,False
+out_of_scaffold,Dummy (mean),NumHDonors,413,-0.375379,-0.455757,-0.286123,True,-0.375379,-0.010415,False
+out_of_scaffold,Dummy (mean),NumHAcceptors,413,-0.339499,-0.427119,-0.247843,True,-0.339499,-0.030315,False
+out_of_scaffold,Linear,MolWt,413,-0.207936,-0.296077,-0.116300,True,0.291389,-0.271706,True
+out_of_scaffold,Linear,MolLogP,413,-0.147841,-0.249967,-0.046525,True,0.601696,-0.326605,True
+out_of_scaffold,Linear,TPSA,413,-0.013009,-0.116127,0.089366,False,-0.378165,0.060270,True
+out_of_scaffold,Linear,NumRotatableBonds,413,-0.171902,-0.264938,-0.073495,True,-0.035081,-0.171007,True
+out_of_scaffold,Linear,AromaticAtomFraction,413,-0.012847,-0.113803,0.087234,False,0.139215,-0.038476,True
+out_of_scaffold,Linear,HeavyAtomCount,413,-0.157728,-0.255388,-0.062467,True,0.188022,-0.194109,False
+out_of_scaffold,Linear,NumRings,413,-0.049716,-0.155381,0.050755,False,0.140306,-0.076243,False
+out_of_scaffold,Linear,NumAromaticRings,413,-0.048597,-0.156180,0.053186,False,0.199525,-0.085389,False
+out_of_scaffold,Linear,NumAliphaticRings,413,0.044192,-0.054752,0.141588,False,-0.130861,0.067038,False
+out_of_scaffold,Linear,NumHeteroatoms,413,-0.126004,-0.225422,-0.023654,True,-0.027843,-0.128486,False
+out_of_scaffold,Linear,FractionCSP3,413,0.097955,-0.003971,0.200594,False,-0.172314,0.132452,False
+out_of_scaffold,Linear,NumHDonors,413,0.039972,-0.057145,0.145035,False,-0.375379,0.113581,False
+out_of_scaffold,Linear,NumHAcceptors,413,-0.044773,-0.146863,0.055687,False,-0.339499,0.016790,False
+out_of_scaffold,MLP,MolWt,413,0.046279,-0.057701,0.151499,False,0.291389,-0.014543,True
+out_of_scaffold,MLP,MolLogP,413,-0.051938,-0.147897,0.044930,False,0.601696,-0.137532,True
+out_of_scaffold,MLP,TPSA,413,0.086725,-0.011818,0.185765,False,-0.378165,0.109755,True
+out_of_scaffold,MLP,NumRotatableBonds,413,0.032061,-0.065877,0.129542,False,-0.035081,0.001248,True
+out_of_scaffold,MLP,AromaticAtomFraction,413,-0.066399,-0.163185,0.032682,False,0.139215,-0.066402,True
+out_of_scaffold,MLP,HeavyAtomCount,413,0.026959,-0.067928,0.129140,False,0.188022,-0.011544,False
+out_of_scaffold,MLP,NumRings,413,-0.024202,-0.126858,0.079676,False,0.140306,-0.026603,False
+out_of_scaffold,MLP,NumAromaticRings,413,-0.028421,-0.128836,0.074548,False,0.199525,-0.043658,False
+out_of_scaffold,MLP,NumAliphaticRings,413,0.026430,-0.070966,0.122348,False,-0.130861,0.044724,False
+out_of_scaffold,MLP,NumHeteroatoms,413,0.141761,0.040822,0.242046,True,-0.027843,0.099642,False
+out_of_scaffold,MLP,FractionCSP3,413,0.063830,-0.035727,0.159048,False,-0.172314,0.070868,False
+out_of_scaffold,MLP,NumHDonors,413,0.096163,0.000266,0.189986,True,-0.375379,0.141646,False
+out_of_scaffold,MLP,NumHAcceptors,413,0.095972,-0.003874,0.193194,False,-0.339499,0.106245,False
+out_of_scaffold,GCN,MolWt,413,0.097406,-0.005798,0.198812,False,0.291389,-0.021382,True
+out_of_scaffold,GCN,MolLogP,413,0.207168,0.107421,0.308011,True,0.601696,0.108370,True
+out_of_scaffold,GCN,TPSA,413,-0.145352,-0.239782,-0.047900,True,-0.378165,-0.126931,True
+out_of_scaffold,GCN,NumRotatableBonds,413,0.030047,-0.067197,0.125729,False,-0.035081,-0.016220,True
+out_of_scaffold,GCN,AromaticAtomFraction,413,0.060263,-0.034393,0.157872,False,0.139215,0.058210,True
+out_of_scaffold,GCN,HeavyAtomCount,413,0.013629,-0.078980,0.110927,False,0.188022,-0.066597,False
+out_of_scaffold,GCN,NumRings,413,-0.052912,-0.144141,0.048257,False,0.140306,-0.073113,False
+out_of_scaffold,GCN,NumAromaticRings,413,0.060548,-0.039920,0.162735,False,0.199525,0.026007,False
+out_of_scaffold,GCN,NumAliphaticRings,413,-0.119394,-0.220070,-0.020373,True,-0.130861,-0.089457,False
+out_of_scaffold,GCN,NumHeteroatoms,413,0.062324,-0.032692,0.157687,False,-0.027843,-0.016962,False
+out_of_scaffold,GCN,FractionCSP3,413,-0.091569,-0.194544,0.003359,False,-0.172314,-0.078660,False
+out_of_scaffold,GCN,NumHDonors,413,-0.175440,-0.265793,-0.078893,True,-0.375379,-0.113658,False
+out_of_scaffold,GCN,NumHAcceptors,413,-0.097964,-0.193976,0.000218,False,-0.339499,-0.096610,False
+out_of_scaffold,GIN,MolWt,413,0.063984,-0.037716,0.161653,False,0.291389,-0.020138,True
+out_of_scaffold,GIN,MolLogP,413,0.103166,0.007685,0.200276,True,0.601696,0.072918,True
+out_of_scaffold,GIN,TPSA,413,-0.082283,-0.176245,0.013943,False,-0.378165,-0.112409,True
+out_of_scaffold,GIN,NumRotatableBonds,413,0.004657,-0.091060,0.093926,False,-0.035081,-0.053318,True
+out_of_scaffold,GIN,AromaticAtomFraction,413,0.036725,-0.061217,0.135092,False,0.139215,0.053439,True
+out_of_scaffold,GIN,HeavyAtomCount,413,0.005058,-0.093028,0.096048,False,0.188022,-0.050380,False
+out_of_scaffold,GIN,NumRings,413,-0.050522,-0.148083,0.045276,False,0.140306,-0.047087,False
+out_of_scaffold,GIN,NumAromaticRings,413,0.036387,-0.062957,0.134043,False,0.199525,0.028459,False
+out_of_scaffold,GIN,NumAliphaticRings,413,-0.072208,-0.173647,0.025560,False,-0.130861,-0.054736,False
+out_of_scaffold,GIN,NumHeteroatoms,413,0.067759,-0.031930,0.157599,False,-0.027843,-0.022935,False
+out_of_scaffold,GIN,FractionCSP3,413,-0.039784,-0.141210,0.055890,False,-0.172314,-0.047166,False
+out_of_scaffold,GIN,NumHDonors,413,-0.073970,-0.172399,0.022232,False,-0.375379,-0.051891,False
+out_of_scaffold,GIN,NumHAcceptors,413,-0.048146,-0.143401,0.044136,False,-0.339499,-0.094159,False

@@ -15,3 +15,6 @@ data/
 
 # Large regenerable sweep artifact (uv run python -m ai4sci_molecule.week3)
 results/week3/predictions.csv
+
+# Large regenerable per-molecule table (uv run python -m ai4sci_molecule.week4)
+results/week4/molecule_errors.csv

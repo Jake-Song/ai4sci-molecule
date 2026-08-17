@@ -1,0 +1,13 @@
+property_a,property_b,spearman
+TPSA,NumHAcceptors,0.935479
+MolWt,HeavyAtomCount,0.933627
+AromaticAtomFraction,NumAromaticRings,0.890738
+AromaticAtomFraction,FractionCSP3,-0.872073
+NumAromaticRings,FractionCSP3,-0.781421
+HeavyAtomCount,NumRings,0.771139
+NumHeteroatoms,NumHAcceptors,0.764277
+TPSA,NumHeteroatoms,0.749026
+MolWt,NumHeteroatoms,0.713597
+TPSA,NumHDonors,0.692140
+MolWt,NumRings,0.659053
+HeavyAtomCount,NumHeteroatoms,0.622675

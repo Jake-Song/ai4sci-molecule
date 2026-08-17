@@ -1,0 +1,3 @@
+regime,split_types,seeds,rows_per_model,distinct_molecules,molecules_in_every_seed,mean_seeds_per_molecule,distinct_scaffolds,scaffolds_over_minimum
+in_domain,random,5,565,470,0,1.202128,136,21
+out_of_scaffold,scaffold + scaffold_shuffled,5,1117,413,113,2.496368,201,30
